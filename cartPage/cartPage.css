@@ -1,0 +1,125 @@
+* {
+	box-sizing: border-box;
+	font-family: "ROBOTO";
+}
+/********** SCROLL BAR CHROME ***************/
+
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(214, 169, 169);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgb(218, 61, 61);
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgb(177, 177, 170);
+}
+/******** LOCALSTORAGE_2.js (CART) *************/
+
+.root {
+	background-color: #ffb;
+	margin: 10px;
+	padding: 10px;
+	width: 100%;
+}
+
+a.main {
+	display: flex;
+	width: 100%;
+	margin: 10px;
+	text-decoration: none;
+	color: inherit;
+	align-items: center;
+	color: rgb(218, 61, 61);
+	font-style: normal;
+	font-style: italic;
+	transition: 0.4s check;
+}
+
+.main img {
+	width: 25px;
+	height: auto;
+	margin: 10px;
+}
+
+table {
+	border-collapse: collapse;
+	border: 1px solid rgb(214, 169, 169);
+	width: 100%;
+	font-size: 20px;
+}
+
+table tr,
+table td,
+table th {
+	border: 1px solid rgb(214, 169, 169);
+	text-align: left;
+	background-color: #ffd;
+	padding: 15px;
+}
+
+.price {
+	width: 20%;
+}
+
+.model {
+	width: 35%;
+}
+
+.store {
+	width: 10%;
+	text-align: center;
+}
+
+.action {
+	display: block;
+	border: none;
+	text-align: center;
+	opacity: 0.75;
+	border-radius: 10px;
+	transition: 0.4s all;
+	width: 15%;
+}
+
+.btnDel {
+	width: 100%;
+	padding: 6%;
+	background: rgb(218, 61, 61);
+	opacity: 0.75;
+	outline: none;
+	border-radius: 6px;
+	border: none;
+	font-size: 20px;
+}
+
+.summ {
+	width: 19%;
+}
+
+.invoice {
+	font-weight: normal;
+	text-align: left;
+	margin: 0px;
+	background-color: #ffd;
+	outline: none;
+	padding: 15px;
+	border: 1px solid rgb(214, 169, 169);
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199.99px) {
+	.table {
+		font-size: 18px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.99px) {
+	.table {
+		font-size: 18px;
+	}
+}

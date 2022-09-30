@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MAIN</title>
+		<link rel="stylesheet" type="text/css" href="./fonts/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="./main/main.css?v=19" />		
+		<link rel="shortcut icon" href="/icons/router.svg" type="image/x-icon" />
+		<meta http-equiv="cache-control" content="no-cache" />
+	</head>
+
+	<body>
+		<a href="./cartPage/cartPage.html" class="cart">
+			<img class="cartIcon" src="./icons/cart.svg" alt="cart" />
+			<span class="AddedProds"> </span>
+		</a>
+		<form class="form">
+			<fieldset>
+				<legend>Фильтр</legend>
+				<label>
+					<select name="type" id="select">
+						<option value="" selected> Вcе </option>
+						<option value="модем">Модем</option>
+						<option value="роутер">Роутер</option>
+						<option value="Блок питания">Блок питания</option>
+					</select>
+				</label>
+				<label> <input type="checkbox" class="desc" /> По наибольшей цене </label>
+				<label> <input type="checkbox" class="asc" /> По наименьшей цене </label>
+				<label> <input type="checkbox" class="ratingSort" /> По рейтингу </label>
+				
+				<label class="priceVal">
+					<input type="range" class="range" min="0" max="50000" step="50" value="0" />
+					<span class="range-view"> </span>
+				</label>
+				<button id="submit">ЗАПУСК</button>
+			</fieldset>
+		</form>
+
+		<div id="root"></div>
+
+		<script type="module" src="./main/main.js"></script>
+	</body>
+</html>

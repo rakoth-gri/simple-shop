@@ -1,0 +1,648 @@
+/* @import 'main_media.css' screen; */
+
+/********** DEFAULT ***************/
+
+* {
+	box-sizing: border-box;
+	font-size: 20px;
+	font-family: "ROBOTO";
+	outline: none;
+}
+
+/********** SCROLL BAR CHROME ***************/
+
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(214, 169, 169);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgb(218, 61, 61);
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgb(177, 177, 170);
+}
+
+/*************** Компонент фильтра **************/
+
+.form {
+	width: 20%;
+	margin-top: 10px;
+	float: left;
+	text-align: center;
+}
+
+fieldset {
+	border: 1px solid rgb(177, 177, 170);
+	border-radius: 4%;
+	box-shadow: 2px 5px 9px rgb(214, 169, 169);
+}
+
+legend {
+	color: rgb(218, 61, 61);
+	margin: 0 2%;
+}
+
+.form label {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 5%;
+}
+
+.form input,
+#select {
+	margin: 0 2%;
+	/* border: 1px solid rgb(177, 177, 170); */
+	border: none;
+	border-radius: 4%;
+	box-shadow: 2px 5px 5px rgb(214, 169, 169);
+	outline: none;
+	padding: 5px;
+}
+
+#select {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.form option {
+	font-size: inherit;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.range-view {
+	width: 40%;
+	margin-left: 3%;
+	text-align: left;
+	color: rgb(218, 61, 61);
+}
+
+/***************** Кнопка отправки *******************/
+
+#submit {
+	height: 15%;
+	margin: 3% auto;
+	display: block;
+	outline: none;
+	border: none;
+	background-color: rgb(214, 169, 169);
+	box-shadow: 2px 5px 5px rgb(214, 169, 169);
+	transition: 0.4s all;
+	border-radius: 10px;
+	width: 60%;
+	padding: 1.5%;
+	font-weight: 700;
+	color: #ffe;
+}
+
+#submit:hover {
+	transform: scale(1.2);
+	color: rgb(218, 61, 61);
+	background-color: rgb(224, 218, 218);
+}
+
+/********** корзина *******************/
+
+.cart {
+	width: 6%;
+	position: absolute;
+	right: 1%;
+	top: 2%;
+	text-align: center;
+	border: 1px solid #ffb;
+	height: auto;
+	border-radius: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	text-decoration: none;
+}
+
+.cart-active {
+	box-shadow: 3px 3px 7px #b82020;
+}
+
+.cartIcon {
+	width: 32%;
+	margin: auto;
+	vertical-align: middle;
+	transform: 0.4s all;
+}
+
+.cartIcon:hover {
+	transform: scale(1.5) rotateZ(20deg);
+}
+
+.AddedProds {
+	color: #b82020;
+	font-size: 22px;
+}
+
+/******** компонент карточек *****************/
+
+#root {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 32%);
+	grid-gap: 2%;
+	justify-items: center;
+	margin: 100px 20px;
+	width: 75%;
+	grid-auto-rows: auto;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 85%;
+	padding: 2%;
+	border: 1px;
+	border: 2px solid #ffd;
+	border-radius: 2%;
+	box-shadow: 2px 5px 5px rgb(214, 169, 169);
+	position: relative;
+	text-align: center;
+}
+
+.model {
+	background-color: #ffd;
+	margin: auto;
+}
+
+.card a {
+	display: block;
+}
+
+.pict {
+	width: 90%;
+	object-fit: contain;
+}
+
+.settings {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.price {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.rating {
+	color: rgb(218, 61, 61);
+	font-weight: 700;
+	font-size: 22px;
+	position: absolute;
+	right: 3%;
+	bottom: 25%;
+	display: flex;
+}
+
+.rating:after {
+	content: "";
+	background: url("../icons/star.svg") no-repeat;
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+}
+
+.price__span {
+	color: rgb(218, 61, 61);
+	margin-right: 3%;
+}
+
+.controll,
+.price {
+	border: 1px solid rgb(177, 177, 170);
+	box-shadow: 2px 5px 5px rgb(214, 169, 169);
+	margin: 0;
+	width: 50%;
+	padding: 3%;
+}
+
+.plus,
+.minus {
+	width: 20%;
+	display: inline-block;
+	font-size: 23px;
+	transition: 0.4s all;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.plus:hover,
+.minus:hover {
+	transform: scale(1.8);
+	color: rgb(218, 61, 61);
+}
+
+.amount {
+	width: 48%;
+	display: inline-block;
+	color: rgb(69, 133, 228);
+}
+
+.store {
+	width: 100%;
+	margin: 2% auto;
+	text-align: center;
+	padding: 1%;
+	border-radius: 3px;
+	box-shadow: 2px 5px 5px rgb(214, 169, 169);
+}
+
+.store span {
+	font-weight: 500;
+	color: rgb(218, 61, 61);
+}
+
+/************* media-запросы ***********************/
+
+@media (min-width: 1200px) {
+	/* блок карточек */
+	#root {
+		width: 80%;
+	}
+	.plus:hover,
+	.minus:hover {
+		transform: scale(1.6);
+	}
+	.store span {
+		color: rgb(218, 61, 61);
+	}
+
+	.form label {
+		font-size: 18px;
+	}
+	fieldset {
+		padding: 5px 0;
+	}
+
+	#select {
+		width: 65%;
+		font-size: 18px;
+	}
+
+	.range-view {
+		font-size: 17.5px;
+	}
+	/* Button */
+	#submit {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	/********** блок карточек **************/
+	#root {
+		width: 78%;
+		margin: 60px auto 10px;
+	}
+	.card {
+		font-size: 17px;
+	}
+	.model,
+	.store {
+		width: 100%;
+		font-size: inherit;
+	}
+	.price {
+		font-size: 17px;
+	}
+	.pict {
+		width: 90%;
+		margin: 0px;
+		object-fit: contain;
+	}
+	.card span {
+		font-size: 17px;
+	}
+	.rating {
+		font-size: 18.5px;
+		bottom: 27%;
+	}
+	.rating:after {
+		width: 20px;
+		height: 20px;
+		left: -4px;
+	}
+	.plus:hover,
+	.minus:hover {
+		transform: scale(1.5);
+	}
+	.form {
+		width: 22%;
+	}
+	.form label {
+		font-size: 17px;
+	}
+	.form fieldset {
+		padding: 5px 0;
+	}
+
+	#select {
+		width: 70%;
+		font-size: 17px;
+	}
+
+	/************ input Range ***************/
+	.range {
+		width: 60%;
+	}
+	.range-view {
+		margin-left: 1px;
+		font-size: 16px;
+	}
+	/* Button */
+	#submit {
+		font-size: 17px;
+	}
+	/************ Корзинка *************/
+	.cart {
+		width: 8%;
+	}
+	.cartIcon {
+		width: 42%;
+		margin: 0 5px;
+	}
+	.cartIcon:hover {
+		transform: scale(1.5) rotateZ(20deg);
+	}
+	.AddedProds {
+		color: #b82020;
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+	/************* блок карточек ***************/
+	#root {
+		grid-template-columns: repeat(auto-fit, 48.5%);
+		width: 95%;
+		clear: both;
+	}
+	.card {
+		width: 100%;
+		font-size: 18px;
+	}
+	.pict {
+		width: 100%;
+		object-fit: contain;
+	}
+	.price__span {
+		font-size: 20px;
+	}
+	.rating {
+		font-size: 20px;
+		bottom: 23%;
+		right: 1%;
+	}
+	.rating:after {
+		width: 20px;
+		height: 20px;
+		left: -4px;
+	}
+	.price__span,
+	.controll span {
+		font-size: 18px;
+	}
+	.plus:hover,
+	.minus:hover {
+		transform: scale(1.5);
+	}
+	/******* Фильтр *************/
+	.form {
+		width: 45%;
+		margin: 50px auto;
+		float: none;
+		font-size: 20px;
+	}
+	fieldset {
+		padding: 5px 0;
+	}
+
+	#select {
+		width: 65%;
+		font-size: 17px;
+		padding: 1%;
+	}
+	.range-view {
+		margin-left: 1px;
+		font-size: inherit;
+	}
+	/*************** Корзинка ***************/
+	.cart {
+		width: 9%;
+	}
+	.cartIcon {
+		width: 44%;
+		margin: 0 5px;
+	}
+	.cartIcon:hover {
+		transform: scale(1.5) rotateZ(20deg);
+	}
+	.AddedProds {
+		color: #b82020;
+		font-size: 22px;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+	/*********** блок карточек ****************/
+	#root {
+		width: 95%;
+		clear: both;
+		margin: 0px auto;
+		grid-template-columns: repeat(auto-fit, 48%);
+		grid-gap: 2%;
+		justify-items: center;
+	}
+	.card {
+		width: 100%;
+		font-size: 17px;
+	}
+	.pict {
+		width: 100%;
+		font-size: 17px;
+	}
+	.model {
+		width: 95%;
+		font-size: inherit;
+	}
+	.controll,
+	.price {
+		font-size: 17px;
+	}
+
+	.rating {
+		font-size: 18.5px;
+		bottom: 24%;
+		right: 0%;
+	}
+	.rating:after {
+		width: 20px;
+		height: 20px;
+		left: -4px;
+	}
+	.plus:hover,
+	.minus:hover {
+		transform: scale(1.5);
+	}
+	.amount {
+		font-size: inherit;
+		width: 45%;
+	}
+	.store {
+		font-size: inherit;
+	}
+	.store span {
+		font-weight: 500;
+		color: rgb(218, 61, 61);
+		font-size: 17px;
+	}
+	/******* Фильтр *************/
+	.form {
+		width: 45%;
+		margin: 50px auto;
+		float: none;
+		font-size: 18px;
+	}
+	.form label {
+		font-size: 18px;
+	}
+	.form fieldset {
+		padding: 5px 0;
+	}
+	#select {
+		font-size: 18px;
+		width: 65%;
+		font-size: 17px;
+		padding: 1%;
+	}
+	/************** Button ***************/
+	#submit {
+		font-size: 18px;
+	}
+	/************* Корзинка ******************/
+	.cart {
+		width: 12%;
+	}
+
+	.cartIcon {
+		width: 40%;
+		margin: 0 5px;
+	}
+	.cartIcon:hover {
+		transform: scale(1.3) rotateZ(20deg);
+	}
+	span.AddedProds {
+		color: #b82020;
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 575.98px) {
+	/************ блок карточек ****************/
+	#root {
+		width: 95%;
+		clear: both;
+		margin: 0px auto;
+		grid-template-columns: repeat(auto-fit, 80%);
+		grid-gap: 0.5%;
+		justify-content: center;
+	}
+	.card {
+		width: 100%;
+		font-size: 17px;
+		align-items: center;
+	}
+	.model {
+		width: 95%;
+		font-size: inherit;
+	}
+	.pict {
+		width: 100%;
+		font-size: 17px;
+	}
+	.rating {
+		font-size: 18.5px;
+		bottom: 24%;
+		right: 0%;
+	}
+	.controll,
+	.price {
+		font-size: 17px;
+	}
+
+	.plus:hover,
+	.minus:hover {
+		transform: scale(1.5);
+	}
+	.amount {
+		font-size: inherit;
+		width: 45%;
+	}
+	.store {
+		font-size: inherit;
+	}
+	.store span {
+		font-weight: 500;
+		color: rgb(218, 61, 61);
+		font-size: 17px;
+	}
+	/******* Фильтр *************/
+	.form {
+		width: 73%;
+		margin: 70px auto;
+		float: none;
+		font-size: 18px;
+	}
+	.form label {
+		font-size: 18px;
+	}
+	.form fieldset {
+		padding: 5px 0;
+	}
+
+	/* input Range */
+	.range {
+		width: 55%;
+	}
+	.range-view {
+		margin-left: 1px;
+		font-size: 16.5px;
+	}
+	#select {
+		font-size: 18px;
+		width: 65%;
+		font-size: 17px;
+		padding: 1%;
+	}
+	/************* Button **************/
+	#submit {
+		font-size: 18px;
+	}
+	/************** Корзина *************/
+	.cart {
+		width: 15%;
+		right: 2%;
+	}
+	.cartIcon {
+		width: 40%;
+		margin: 0 5px;
+	}
+	.cartIcon:hover {
+		transform: scale(1.3) rotateZ(20deg);
+	}
+	.AddedProds {
+		color: #b82020;
+		font-size: 18px;
+	}
+}
