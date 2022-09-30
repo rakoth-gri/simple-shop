@@ -1,6 +1,6 @@
 import { productList } from "../constant/constants.js";
 
-import { getLS, putLS } from "../utils/LS.js";
+import { getLS, putLS } from "../utils/ls.js";
 
 class Product {
 	constructor(productList) {
