@@ -89,7 +89,7 @@ class Main {
 			let card = `
             <div class="card">
                 <span class="model"> ${model}</span>
-                <a href="/simple-shop/product/product.html?id=${key}" alt="good-link"  ><img class="pict" src="${pict}" data-id="${key}"></img></a>
+                <a href="./product/product.html?id=${key}" alt="good-link"  ><img class="pict" src="${pict}" data-id="${key}"></img></a>
                 <span class="rating"> ${rating} </span>                
                 <div class="settings">
                     <div class="price"> <span class="price__span">${price.toLocaleString()}</span> &#8381; </div>
