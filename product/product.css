@@ -27,15 +27,14 @@
 }
 
 .description {
-	width: 60%;
+	width: 70%;
 	margin: 50px auto;
 	padding: 2%;
 }
 
 .model {
 	font-size: 24px;
-	display: block;
-	margin: 0 auto;
+	margin: 10px auto;
 	font-weight: bold;
 	text-align: center;
 	color: rgb(218, 61, 61);
@@ -52,7 +51,7 @@
 .store span,
 .price span {
 	color: rgb(218, 61, 61);
-	font-size: 22px;
+	font-size: 19px;
 }
 
 .store {
@@ -71,7 +70,7 @@
 }
 
 .desc {
-	margin: 15px;
+	margin: 10px;
 	text-align: justify;
 	color: rgb(112, 110, 107);
 }
@@ -89,21 +88,17 @@
 	text-align: justify;
 	color: rgb(112, 110, 107);
 	text-align: justify;
-	margin: 3px auto;
+	margin: 10px;
 }
 
 .specification:first-letter {
 	text-transform: uppercase;
-	font-size: 22px;
+	font-size: 20px;
 	color: rgb(218, 61, 61);
 }
 /************* media-querries ************/
 
 @media screen and (min-width: 992px) and (max-width: 1199.99px) {
-	.good_desc {
-		width: 85%;
-		font-size: 19px;
-	}
 	.model {
 		font-size: 24px;
 	}
@@ -133,10 +128,6 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 991.99px) {
-	.good_desc {
-		width: 88%;
-		font-size: 18px;
-	}
 	.model {
 		font-size: 22px;
 	}
@@ -166,12 +157,6 @@
 }
 
 @media screen and (min-width: 576px) and (max-width: 767.99px) {
-	.good_desc {
-		width: 96%;
-		font-size: 17px;
-		margin: 15px auto;
-		padding: 2%;
-	}
 	.model {
 		font-size: 20px;
 		margin: 19px 0;
@@ -206,11 +191,8 @@
 }
 
 @media screen and (max-width: 575.99px) {
-	.good_desc {
-		width: 100%;
+	.description {
 		font-size: 15px;
-		position: relative;
-		margin: 25px 0;
 	}
 	.model {
 		font-size: 17px;
@@ -220,25 +202,26 @@
 	.store {
 		font-size: inherit;
 	}
-	.price span,
-	.store span {
-		font-size: inherit;
-	}
+	
 	.pict {
 		width: 36%;
 		margin-top: 20px;
 	}
 	.price,
-	.desc {
+	.desc,
+	.specification {
 		font-size: 15px;
 	}
 	.title {
 		font-size: 17px;
 	}
-	.specification {
-		font-size: inherit;
-	}
 	.specification:first-letter {
 		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 991.98px) {
+	.description {
+		width: 90%;
 	}
 }

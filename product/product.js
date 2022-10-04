@@ -1,6 +1,6 @@
 import { productList } from "../constant/constants.js";
 
-import { getLS, putLS } from "../utils/ls.js";
+import { getLS } from "../utils/ls.js";
 
 class Product {
 	constructor(productList) {
@@ -20,7 +20,7 @@ class Product {
 
 		let temp = `
         <div class="description">
-            <span class="model"> ${model}</span>
+            <h1 class="model"> ${model} </h1>
             <div class="store"> На складе: <span>${selectedGoods[id] ? selectedGoods[id] : store} </span> шт. </div>
             <div class="price"> Цена с НДС: <span>${price.toLocaleString()}</span> &#8381; </div>
             <img alt="picture" src="${pict}" class="pict">           
